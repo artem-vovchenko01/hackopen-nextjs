@@ -119,3 +119,9 @@
     flex-direction: column;
   }
 }
+
+.body {
+  background-image: url('/images/laptop_background.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+}

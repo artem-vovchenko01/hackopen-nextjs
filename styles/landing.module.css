@@ -1,0 +1,62 @@
+.landingH1 {
+  color: white;
+  width: 50%;
+  text-align: center;
+ /* margin: 11em 0 11.5em 1em; */
+}
+
+.arrow {
+  display: block; 
+  margin: 0 auto;
+  margin-top: -1px;
+}
+
+.contentWrapper {
+  border-top: 10px solid #14B8A6;
+  background-color: #ECFDF5;
+}
+
+.contentBlock {
+  display: flex;
+  align-items: center;
+}
+
+.contentBlock img {
+  width: 28rem;
+}
+
+.imageOnLeft img {
+  order: 1;
+}
+
+.imageOnLeft .text-content {
+  order: 2;
+}
+
+.textContent {
+  padding: 1rem;
+}
+
+.textContent p {
+  font-weight: 400;
+}
+
+@media (max-width: 40em) {
+    .contentBlock {
+      flex-direction: column;
+    }
+
+  .imageOnLeft img {
+    order: 2;
+  }
+
+  .imageOnLeft .text-content {
+    order: 1;
+  }
+
+  .contentBlock img {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+  }
+}
