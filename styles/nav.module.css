@@ -6,7 +6,7 @@
   background-color: rgba(16, 185, 129, 0.91);
 }
 
-.nav ul {
+.navUl {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -23,7 +23,7 @@
   width: 100%;
 }
 
-.nav li {
+.navLi {
   padding: 0 0.4rem;
   font-size: 1rem;
   font-weight: 1000;
@@ -46,7 +46,7 @@
   display: inline-block;
 }
 
-.nav a {
+.navA {
   text-decoration: none;
   color: white;
 }

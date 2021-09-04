@@ -1,18 +1,25 @@
 import Image from 'next/image'
+import styles from '/styles/landing.module.css'
 
-export default function ContentBlock( { props }) {
-    const divClasses = "conten-block" + props.divClass;
+export default function ContentBlock( { left, mainText, pText, image }) {
+    let imgStyles = styles.contentBlockImg + ' ';
+    let textContentStyles = styles.textContent + ' ';
+    if (left === true) {
+      imgStyles += styles.imageOnLeftImg;
+      textContentStyles += styles.imageOnLeftTextContent;
+    }
+
     return (
-      <div className={props.divClasses}>
-        <div className="text-content">
+      <div className={styles.contentBlock}>
+        <div className={textContentStyles}>
           <h2>
-            {props.mainText}
+            {mainText}
           </h2>
           <p>
-            {props.pText}
+            {pText}
           </p>
         </div>
-        <Image src={props.image} height={300} width={300} />
+        <Image className={imgStyles} src={image} height={400} width={603} />
       </div>
     );
 }

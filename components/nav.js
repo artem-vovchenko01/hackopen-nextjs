@@ -8,43 +8,46 @@ export default function Nav() {
     return (
       <header>
         <nav className={styles.nav}>
-          <ul>
-            <Link href='/'>
-              <a>
-              <li className={styles.logoLi}>
-              <Image className={styles.logo} height={15} width={64} src='/images/hackopenLogo.png' />
+          <ul className={styles.navUl}>
+              <li className={styles.logoLi + ' ' + styles.navLi}>
+                <Link href='/'>
+                  <a className={styles.navA}>
+                  <Image className={styles.logo} height={15} width={64} src='/images/hackopenLogo.png' />
+                  </a>
+                </Link>
               </li>
-              </a>
-            </Link>
 
-          <Link href='#'>
-            <a>
-            <li className={styles.navStart}>
-                <a>register</a>
+            <li className={styles.navStart + ' ' + styles.navLi}>
+              <Link href='/login'>
+                <a className={styles.navA}>
+                    register
+                </a>
+              </Link>
             </li>
-            </a>
-          </Link>
-          <Link href='#'>
-            <a>
-            <li>
-                <a>login</a>
+
+            <li className={styles.navLi}>
+              <Link href='#'>
+                <a className={styles.navA}>
+                    login
+                </a>
+              </Link>
             </li>
-            </a>
-          </Link>
-          <Link href='#'>
-            <a>
-            <li>
-                <a>contact</a>
+
+            <li className={styles.navLi}>
+              <Link href='#'>
+                <a className={styles.navA}>
+                    contact
+                </a>
+              </Link>
             </li>
-            </a>
-          </Link>
-          <Link href='#'>
-            <a>
-            <li>
-                <a>weather</a>
+
+            <li className={styles.navLi}>
+                <Link href='#'>
+                  <a className={styles.navA}>
+                      weather
+                  </a>
+                </Link>
             </li>
-            </a>
-          </Link>
           </ul>
         </nav>
       </header>

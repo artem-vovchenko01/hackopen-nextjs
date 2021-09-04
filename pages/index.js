@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Layout from '../components/layout'
 import styles from '/styles/landing.module.css'
 import homeStyles from '/styles/Home.module.css'
+import ContentBlock from '../components/contentBlock'
 
 const pTexts = [
     "You can join us offline in San Francisco or online using video, voice and chat communication. You need to be registered in both cases. ",
@@ -20,7 +21,7 @@ const hTexts = [
 
 export default function Landing() {
   return (
-      <Layout>
+      <Layout title='Hackopen'>
       <div>
         <h1 class={styles.landingH1}>
           Here we build open source software to empower the future
@@ -28,7 +29,7 @@ export default function Landing() {
 
         <div className={styles.contentWrapper}>
 
-        <div>
+        {/* <div>
             <div className={styles.textContent}>
             <h2>
                 {hTexts[0]}
@@ -38,9 +39,21 @@ export default function Landing() {
             </p>
             </div>
             <Image src="/images/community.png" height={400} width={603} />
-        </div>
+        </div> */}
 
-        <div className={styles.imageOnLeft}>
+        <ContentBlock left={false} pText={pTexts[0]} mainText={hTexts[0]} image='/images/community.png'>
+        </ContentBlock>
+
+        <ContentBlock left={true} pText={pTexts[1]} mainText={hTexts[1]} image='/images/team.png'>
+        </ContentBlock>
+
+        <ContentBlock left={false} pText={pTexts[2]} mainText={hTexts[2]} image='/images/FOSS.png'>
+        </ContentBlock>
+
+        <ContentBlock left={true} pText={pTexts[3]} mainText={hTexts[3]} image='/images/investors.png'>
+        </ContentBlock>
+
+        {/* <div className={styles.imageOnLeft}>
             <div className={styles.textContent}>
             <h2>
                 {hTexts[1]}
@@ -50,9 +63,9 @@ export default function Landing() {
             </p>
             </div>
             <Image src="/images/team.png" height={400} width={603} />
-        </div>
+        </div> */}
 
-        <div>
+        {/* <div>
             <div className={styles.textContent}>
             <h2>
                 {hTexts[2]}
@@ -62,9 +75,9 @@ export default function Landing() {
             </p>
             </div>
             <Image src="/images/FOSS.png" height={400} width={603} />
-        </div>
+        </div> */}
 
-        <div className={styles.imageOnLeft}>
+        {/* <div className={styles.imageOnLeft}>
             <div className={styles.textContent}>
             <h2>
                 {hTexts[3]}
@@ -74,7 +87,7 @@ export default function Landing() {
             </p>
             </div>
             <Image src="/images/investors.png" height={400} width={603} />
-        </div>
+        </div> */}
 
         </div>
       </div>

@@ -3,13 +3,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Nav from './nav'
 
-export default function Layout( { children, home }) {
+export default function Layout( { children, home, title }) {
     return (
-        <div>
+        <>
             <Head>
+                <title>{title}</title>
                 <Nav/>
             </Head>
             <main>{ children }</main>
-        </div>
+        </>
+
     )
 }
