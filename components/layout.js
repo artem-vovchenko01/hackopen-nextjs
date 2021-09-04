@@ -12,6 +12,5 @@ export default function Layout( { children, home, title }) {
             </Head>
             <main>{ children }</main>
         </>
-
     )
 }
