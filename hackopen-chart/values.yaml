@@ -1,0 +1,24 @@
+replicaCount: 1
+
+deployment:
+  name: hackopen-deployment
+  containerPort: 3000
+
+labels:
+  app: hackopen
+
+image:
+  repository: avovchenko01/hackopen-nextjs
+  pullPolicy: IfNotPresent
+
+service:
+  name: hackopen-service
+  type: ClusterIP
+  port: 80
+
+ingress:
+  name: hackopen-ingress
+  paths:
+    - path: /
+      pathType: Prefix
+

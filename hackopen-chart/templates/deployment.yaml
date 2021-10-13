@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.deployment.name }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      {{- toYaml $.Values.labels | nindent 6 }} 
+  template:
+    metadata:
+      labels:
+        {{- toYaml $.Values.labels | nindent 8 }} 
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: {{ .Values.image.repository }}
+          ports:
+            - name: next-js-port
+              containerPort: {{ .Values.deployment.containerPort }}
+              protocol: TCP
+
