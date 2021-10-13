@@ -22,7 +22,7 @@ export default function Landing() {
   return (
       <Layout title='Hackopen'>
       <div>
-        <h1 class={styles.landingH1}>
+        <h1 className={styles.landingH1}>
           Here we build open source software to empower the future
         </h1>
 
